@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research Paper - Perancangan Sistem Monitoring dan Proteksi Motor DC Berbasis IoT">
+    <title>Research Paper - Muflikhul Hakim</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="paper-viewer.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="paper-nav">
+        <div class="nav-content">
+            <a href="project-detail.html" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Project</span>
+            </a>
+            
+            <div class="nav-title">
+                <i class="fas fa-file-pdf"></i>
+                <span>Research Paper</span>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="action-btn" id="downloadBtn">
+                    <i class="fas fa-download"></i>
+                    <span>Download</span>
+                </button>
+                <button class="action-btn" id="fullscreenBtn">
+                    <i class="fas fa-expand"></i>
+                    <span>Fullscreen</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Paper Header -->
+    <section class="paper-header">
+        <div class="container">
+            <div class="paper-badge">
+                <i class="fas fa-graduation-cap"></i> Academic Research
+            </div>
+            
+            <h1 class="paper-title">
+                Perancangan Sistem Monitoring dan Proteksi Motor DC Berbasis IoT 
+                Menggunakan Edge Machine Learning, MQTT, dan Closed-Loop Control pada ESP32
+            </h1>
+            
+            <div class="paper-metadata">
+                <div class="meta-row">
+                    <div class="meta-label">Author:</div>
+                    <div class="meta-value">Muflikhul Hakim</div>
+                </div>
+                <div class="meta-row">
+                    <div class="meta-label">Institution:</div>
+                    <div class="meta-value">Program Studi Teknik Mesin, Universitas Islam Negeri Maulana Malik Ibrahim Malang</div>
+                </div>
+                <div class="meta-row">
+                    <div class="meta-label">Year:</div>
+                    <div class="meta-value">2025</div>
+                </div>
+                <div class="meta-row">
+                    <div class="meta-label">Keywords:</div>
+                    <div class="meta-value">
+                        <span class="keyword">IoT</span>
+                        <span class="keyword">Edge Machine Learning</span>
+                        <span class="keyword">ESP32</span>
+                        <span class="keyword">MQTT</span>
+                        <span class="keyword">Motor DC</span>
+                        <span class="keyword">Closed-Loop System</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Abstract -->
+            <div class="abstract-section">
+                <h2><i class="fas fa-align-left"></i> Abstract</h2>
+                <p>
+                    Overheating pada motor DC dapat menyebabkan penurunan performa dan kerusakan 
+                    pada sistem. Penelitian ini mengusulkan sistem monitoring dan proteksi motor DC berbasis 
+                    Internet of Things (IoT) dengan integrasi edge machine learning pada ESP32. Sistem dirancang 
+                    menggunakan pendekatan closed-loop, di mana data suhu dari sensor DS18B20 diproses secara 
+                    lokal untuk mendeteksi pola kenaikan suhu (rise). Keputusan proteksi dilakukan melalui 
+                    kombinasi klasifikasi machine learning dua kelas (normal dan rise) serta mekanisme rule-based 
+                    untuk kondisi kritis. Data sistem dikirimkan secara real-time melalui protokol MQTT dan dapat 
+                    dimonitor melalui perangkat seluler, serta ditampilkan secara lokal menggunakan LCD. Hasil 
+                    pengujian menunjukkan bahwa model machine learning terbaik mencapai <strong>akurasi hingga 99%</strong> 
+                    dan sistem mampu beroperasi secara stabil dalam pengujian kontinu.
+                </p>
+            </div>
+            
+            <!-- Research Highlights -->
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="highlight-text">
+                        <strong>Edge ML Implementation</strong>
+                        <p>Machine learning berjalan langsung di ESP32 tanpa cloud dependency</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="highlight-text">
+                        <strong>99% Model Accuracy</strong>
+                        <p>Neural Network Classifier dengan 2-class classification</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="highlight-text">
+                        <strong>Hybrid Detection</strong>
+                        <p>Kombinasi ML inference dan rule-based threshold</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="highlight-text">
+                        <strong>Real-time Monitoring</strong>
+                        <p>MQTT protocol dengan dashboard mobile dan LCD display</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF Viewer -->
+    <section class="pdf-viewer-section">
+        <div class="container-full">
+            <div class="viewer-controls">
+                <div class="control-group">
+                    <button class="control-btn" id="zoomOutBtn" title="Zoom Out">
+                        <i class="fas fa-search-minus"></i>
+                    </button>
+                    <span class="zoom-level" id="zoomLevel">100%</span>
+                    <button class="control-btn" id="zoomInBtn" title="Zoom In">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                </div>
+                
+                <div class="control-group">
+                    <button class="control-btn" id="prevPageBtn" title="Previous Page">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <span class="page-info">
+                        <span id="currentPage">1</span> / <span id="totalPages">--</span>
+                    </span>
+                    <button class="control-btn" id="nextPageBtn" title="Next Page">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="control-group">
+                    <button class="control-btn" id="fitWidthBtn" title="Fit Width">
+                        <i class="fas fa-arrows-alt-h"></i>
+                    </button>
+                    <button class="control-btn" id="fitPageBtn" title="Fit Page">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="pdf-container" id="pdfContainer">
+                <div class="pdf-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading paper...</p>
+                </div>
+                
+                <!-- PDF will be embedded here -->
+                <iframe 
+                    id="pdfFrame" 
+                    src="paper.pdf" 
+                    type="application/pdf"
+                    style="display: none;">
+                </iframe>
+                
+                <!-- Fallback for browsers that don't support iframe PDF -->
+                <div class="pdf-fallback" style="display: none;">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>PDF Viewer Not Supported</h3>
+                    <p>Your browser doesn't support inline PDF viewing.</p>
+                    <a href="paper.pdf" download="Muflikhul_Hakim_IoT_Digital_Twin_Paper.pdf" class="download-btn-large">
+                        <i class="fas fa-download"></i>
+                        Download PDF Instead
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Citation Section -->
+    <section class="citation-section">
+        <div class="container">
+            <h2><i class="fas fa-quote-right"></i> Cite This Paper</h2>
+            
+            <div class="citation-box">
+                <div class="citation-format">APA Format:</div>
+                <div class="citation-text" id="citationText">
+                    Hakim, M. (2025). Perancangan Sistem Monitoring dan Proteksi Motor DC Berbasis IoT 
+                    Menggunakan Edge Machine Learning, MQTT, dan Closed-Loop Control pada ESP32. 
+                    <em>Program Studi Teknik Mesin, Universitas Islam Negeri Maulana Malik Ibrahim Malang</em>.
+                </div>
+                <button class="copy-btn" id="copyCitationBtn">
+                    <i class="fas fa-copy"></i>
+                    Copy Citation
+                </button>
+            </div>
+            
+            <div class="citation-note">
+                <i class="fas fa-info-circle"></i>
+                Paper ini merupakan hasil penelitian mahasiswa dan sedang dalam proses untuk dipublikasikan.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="paper-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Muflikhul Hakim</p>
+                    <p>Teknik Mesin - UIN Maulana Malik Ibrahim Malang</p>
+                </div>
+                <div class="footer-right">
+                    <a href="index.html">Portfolio</a>
+                    <a href="project-detail.html">Project Detail</a>
+                    <a href="paper.pdf" download>Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="paper-viewer.js"></script>
+</body>
+</html>
